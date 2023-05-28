@@ -2,7 +2,12 @@ server:
   port: 8888
 spring:
   application:
-    name: damasceno-config-server
-  profiles:
-    active:
-    - native
+    name: microsservice-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/yanmaiaa/spring-boot-project
+          default-label: working #Aqui passar a branch ao qual está a pasta do projeto por padrão
+          search-paths:
+          - 'greeting-service*'
