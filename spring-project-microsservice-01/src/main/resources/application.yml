@@ -1,0 +1,13 @@
+##Foi modificado o formato do arquivo pois é nessessário para utilizarmos o docker-compose, kubernets etc, será necessário
+spring:
+  application:
+   name: greeting-service
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - '*'
+greeting-service:
+  greeting: "Olá"
+  default-value: "Mundo"
